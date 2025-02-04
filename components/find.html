@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Store Locator: Starbucks Coffee Company</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.FpBTdmS425XMYJ6kJH-fVAHaHd?rs=1&pid=ImgDetMain">
+    <link rel="stylesheet" href="find.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="hidden">
+
+    <div class="loadingTop"></div>
+
+    <div class="loading"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom" id="NavZI">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand"><img
+                    src="https://th.bing.com/th/id/OIP.FpBTdmS425XMYJ6kJH-fVAHaHd?rs=1&pid=ImgDetMain" alt=""
+                    style="-webkit-border-before-width: 50px; height: 50px ;"></a>
+
+            <button class="navbar-toggler noneClick" data-bs-toggle="offcanvas" data-bs-target="#nav" id="btn-open-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end hiddenMenu" id="nav">
+                <div class="offcanvas-header">
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav gap-2 justify-content-start flex-grow-1">
+                        <li class="nav-item">
+                            <a href="menu.html" class="nav-link fw-bold text-dark">MENU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Reward.html" class="nav-link fw-bold text-dark">REWARDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gift.html" class="nav-link fw-bold text-dark">GIFT CARDS</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="container-right d-flex gap-4">
+                        <a href="find.html" class="me-5 nav-link fw-bold d-flex  align-items-center" id="locantion">
+                            <span class="fs-4"><i class='bx bxs-map'></i></span> Find a store</a>
+
+                        <div class="container-login">
+                            <div class="btn btn-outline-dark rounded-5 me-2 fw-bold"><a href="signin.html"
+                                    class="nav-link">Sing in</a></div>
+                            <div class="btn btn-dark rounded-5 fw-bold"><a href="join.html" class="nav-link">Join
+                                    now</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-12" id="container-left">
+                <div class="container-tap mt-5 border border-success">
+                    <button class="btn activeBTN fw-bold btn-taps ">Pickup</button>
+                    <button class="btn fw-bold btn-taps ">Delivery</button>
+                </div>
+
+
+                
+                <div class="container-taps-page1 active" id="heightCotnainer">
+                    <form action="#" class="d-flex gap-4  w-100 container" id="inputFind">
+                        <div class="container-input w-100">
+                            <input type="search" class="form-control w-100" placeholder="Find a store">
+                        </div>
+                        <button class="btn btn-outline-success rounded-5">Filter</button>
+                    </form>
+    
+                    <div class="container" ​​​ id="loacat-dnone">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125103.9569561702!2d104.90147758406465!3d11.51604333617646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sStarbucks!5e0!3m2!1sen!2skh!4v1738547326229!5m2!1sen!2skh"
+                            style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="container" id="container1">
+                        <div class="container w-100">
+                            <h2 class="fs-2">No stores were found.</h2>
+
+                            <p style="margin: 20px 0;">Do you want to look further away?</p>
+
+                            <button class="btn btn-success rounded-5">Expand Search</button>
+                        </div>
+
+
+                        <div class="container-link container mt-5">
+                            <a href="#" class="text-success nav-link fw-bold">Privacy Notice</a>
+                            <a href="#" class="text-success nav-link fw-bold">Terms of Use</a>
+                            <a href="#" class="text-success nav-link fw-bold">Do Not Share My Personal Information</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" id="Dnone">
+                    <div class="row">
+
+                        <div class="container-taps-page1" id="containerCP-nth2">
+                            <div class="container delivery text-center">
+                                <h2 class="text-dark fw-bold fs-2 mb-4">Today deserves delivery</h2>
+                                <p class="fw-bold fs-6 mb-4">Enjoy Starbucks® delivery powered by DoorDash. For
+                                    additional help, visit <a href="#" class="text-success"> Delivery FAQs.</a></p>
+                                <button class="btn btn-success fw-bold rounded-5 p-3 px-5">Get started</button>
+                            </div>
+
+                            <div class="container content mt-5 text-center">
+                                <p class="text-secondary fs-6">Menu limited. Menu pricing for delivery may be higher
+                                    than posted in stores or as marked. Additional fees may apply. Delivery orders are
+                                    not eligible for Starbucks® Rewards benefits at this time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-5 col-sm-12" id="container-right">
+                <div class="container" id="dNone-Rp-map">
+                    <div class="container-map mt-5 container-taps-page2 active">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125103.9569561702!2d104.90147758406465!3d11.51604333617646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sStarbucks!5e0!3m2!1sen!2skh!4v1738547326229!5m2!1sen!2skh"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+
+                <div class="container-map mt-5 container-taps-page2 w-100" id="containerCP2-nth2">
+                    <img src="https://www.starbucks.com/weblx/images/delivery/delivery-hero.png" alt="">
+
+                    <div class="container" id="DnoneRP">
+                        <div class="container delivery text-center">
+                            <h2 class="text-dark fw-bold fs-2 mb-4">Today deserves delivery</h2>
+                            <p class="fw-bold fs-6 mb-4">Enjoy Starbucks® delivery powered by DoorDash. For additional
+                                help, visit <a href="#" class="text-success"> Delivery FAQs.</a></p>
+                            <button class="btn btn-success fw-bold rounded-5 p-3 px-5">Get started</button>
+                        </div>
+                    </div>
+
+                    <div class="container content mt-5 text-center" id="content-p-dNone">
+                        <p class="text-secondary fs-6">Menu limited. Menu pricing for delivery may be higher than
+                            posted in stores or as marked. Additional fees may apply. Delivery orders are not
+                            eligible for Starbucks® Rewards benefits at this time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="find.js"></script>
+</body>
+
+</html>

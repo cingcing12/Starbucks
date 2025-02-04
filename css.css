@@ -1,0 +1,117 @@
+#footerRP{
+    display: none;
+}
+#icon-link:hover{
+    background-color: lightgray;
+}
+#navHover:hover{
+    text-decoration: underline;
+}
+.arrowDownIcon{
+    transition: .5s ease;
+}
+
+.arrowDownIcon.active{
+    transform: rotate(180deg);
+    
+}
+
+
+body.hidden{
+    overflow: hidden;
+}
+
+#NavZI{
+    z-index: 10000;
+}
+
+#btn-open-nav.noneClick{
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+#nav.hiddenMenu{
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
+}
+
+.loading{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 10000;
+    transition: opacity 2s, visibility 2s;
+}
+
+.hiddenLoading{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading::after{
+    position: absolute;
+    content: url(../image/loaing.png);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:  loading 2s linear infinite;
+    top: 25%;
+}
+
+@keyframes loading{
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+.loadingTop{
+    position: fixed;
+    top: 0;
+    z-index: 11111111;
+    width: 200px;
+    height: 4px;
+    background-color: green;
+    left: 0%;
+    animation: loadingtop 1.5s linear infinite;
+    transition: opacity 1.5s, visibility 1.5s;
+}
+
+.loadingTop.active{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes loadingtop{
+    to{
+        left: 100%;
+    }
+}
+
+
+@media(max-width:991px){
+    .container-right{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 40px;
+        border-top: 1px solid black;
+        padding: 20px 0 20px 0;
+    }
+
+    #footerRP{
+        display: block;
+    }
+
+    #footerNone{
+        display: none;
+    }
+}

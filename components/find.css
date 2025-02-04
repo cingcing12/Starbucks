@@ -1,0 +1,299 @@
+#footerRP{
+    display: none;
+}
+#icon-link:hover{
+    background-color: lightgray;
+}
+#navHover:hover{
+    text-decoration: underline;
+}
+.arrowDownIcon{
+    transition: .5s ease;
+}
+
+.arrowDownIcon.active{
+    transform: rotate(180deg);
+    
+}
+
+
+body.hidden{
+    overflow: hidden;
+}
+
+#NavZI{
+    z-index: 10000;
+}
+
+#btn-open-nav.noneClick{
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+#nav.hiddenMenu{
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
+}
+
+.loading{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 10000;
+    transition: opacity 2s, visibility 2s;
+}
+
+.hiddenLoading{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading::after{
+    position: absolute;
+    content: url(../image/loaing.png);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:  loading 2s linear infinite;
+    top: 25%;
+}
+
+@keyframes loading{
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+#locantion{
+    position: relative;
+}
+#locantion::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: green;
+    left: 0;
+    bottom: -20px;
+}
+
+.container-tap{
+    width: 100%;
+    display: flex;
+    border-radius: 50px;
+}
+.container-tap button{
+    border-radius: 50px;
+    width: 100%;
+    color: #00754a;
+}
+
+.container-tap button:hover{
+    background-color: #e5f1ec;
+}
+
+.container-tap .activeBTN{
+    background-color: #00754a;
+    color: white;
+}
+
+.container-map{
+    width: 100%;
+    height: 86vh;
+}
+.container-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.container-taps-page1{
+    display: none;
+}
+
+.container-taps-page1.active{
+    display: block;
+}
+
+.container-taps-page2{
+    display: none;
+}
+.container-taps-page2.active{
+    display: block;
+}
+
+#containerCP-nth2.active{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; 
+}
+#Dnone{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#containerCP2-nth2 img{
+    width: 700px;
+}
+#containerCP2-nth2.active{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 78vh;
+    text-align: center;
+    background-image: linear-gradient(180deg, #197449, #f1f8f5);
+    flex-direction: column;
+}
+
+#DnoneRP{
+    display: none;
+}
+#content-p-dNone{
+    display: none;
+}
+
+#container1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+#heightCotnainer{
+    width: 100%;
+    height: 84vh;
+}
+body{
+    overflow-y: hidden;
+}
+
+#inputFind{
+    margin-top: 40px;
+}
+
+#loacat-dnone{
+    display: none;
+}
+
+.loadingTop{
+    position: fixed;
+    top: 0;
+    z-index: 11111111;
+    width: 200px;
+    height: 4px;
+    background-color: green;
+    left: 0%;
+    animation: loadingtop 1.5s linear infinite;
+    transition: opacity 1.5s, visibility 1.5s;
+}
+
+.loadingTop.active{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes loadingtop{
+    to{
+        left: 100%;
+    }
+}
+@media(max-width:991px){
+    .container-right{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 40px;
+        border-top: 1px solid black;
+        padding: 20px 0 20px 0;
+    }
+
+    #footerRP{
+        display: block;
+    }
+
+    #footerNone{
+        display: none;
+    }
+
+    .container-map{
+        height: 45vh;
+    }
+
+    #Dnone{
+        display: none;
+    }
+
+    #locantion::after{
+        width: 0;
+    }
+
+    #containerCP2-nth2.active{
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        text-align: center;
+        background-image: linear-gradient(to bottom, #197449, #f1f8f5);
+    }
+    #containerCP2-nth2 img{
+        width: 250px;
+    }
+
+    #DnoneRP{
+        display: inline-flex;
+    }
+
+    #containerCP2-nth2.active{
+        justify-content: space-around;
+    }
+
+    #content-p-dNone{
+        display: inline-flex;
+    }
+    #heightCotnainer{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        overflow: auto;
+    }
+
+    #dNone-Rp-map{
+        display: none;
+    }
+
+    #loacat-dnone{
+        display: inline-flex;
+        margin-top: 40px;
+        height: 40vh;
+    }
+    #container1{
+        justify-content: center;
+        height: 50%;
+    }
+
+    .container-tap button:hover{
+        background-color: #00754a;
+        color: white;
+    }
+
+}

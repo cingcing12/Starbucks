@@ -1,0 +1,172 @@
+#footerRP{
+    display: none;
+}
+#icon-link:hover{
+    background-color: lightgray;
+}
+#navHover:hover{
+    text-decoration: underline;
+}
+.arrowDownIcon{
+    transition: .5s ease;
+}
+
+.arrowDownIcon.active{
+    transform: rotate(180deg);
+    
+}
+
+/* sigin box */
+
+.input-box{
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input{
+    height: 50px;
+    border-radius: 10px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    color: black;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: 1px;
+    background: white;
+    color: #00754a;
+    padding: 2px 10px;
+}
+
+
+
+.icon-show-and-hide-ps i{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#show{
+    display: none;
+}
+
+#hide{
+    display: inline-flex;
+}
+
+#checkbox{
+    position: relative;
+}
+
+#checkbox.active{
+    background-color: #00754a;
+}
+
+body.hidden{
+    overflow: hidden;
+}
+
+#NavZI{
+    z-index: 10000;
+}
+
+#btn-open-nav.noneClick{
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+#nav.hiddenMenu{
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
+}
+
+.loading{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 10000;
+    transition: opacity 2s, visibility 2s;
+}
+
+.hiddenLoading{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading::after{
+    position: absolute;
+    content: url(../image/loaing.png);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:  loading 2s linear infinite;
+    top: 25%;
+}
+
+@keyframes loading{
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+.loadingTop{
+    position: fixed;
+    top: 0;
+    z-index: 11111111;
+    width: 200px;
+    height: 4px;
+    background-color: green;
+    left: 0%;
+    animation: loadingtop 1.5s linear infinite;
+    transition: opacity 1.5s, visibility 1.5s;
+}
+
+.loadingTop.active{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes loadingtop{
+    to{
+        left: 100%;
+    }
+}
+
+
+@media(max-width:991px){
+    .container-right{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 40px;
+        border-top: 1px solid black;
+        padding: 20px 0 20px 0;
+    }
+
+    #footerRP{
+        display: block;
+    }
+
+    #footerNone{
+        display: none;
+    }
+}
